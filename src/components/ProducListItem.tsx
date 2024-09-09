@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     flex: 1,
     maxWidth: '50%',
+    height: 250,
   },
   image: {
     width: '100%',

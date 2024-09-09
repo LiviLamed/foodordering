@@ -3,7 +3,7 @@ import { Product } from '@/models/product.model';
 const products: Product[] = [
   {
     id: 1,
-    name: 'Ultimate Pepperoni',
+    name: 'Perfect Pepperoni',
     image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/peperoni.png',
     price: 12.99,
   },
@@ -55,12 +55,12 @@ const products: Product[] = [
     image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/extravaganzza.png',
     price: 13.99,
   },
-  {
-    id: 10,
-    name: '6 Cheese',
-    image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/6cheese.png',
-    price: 13.29,
-  },
+  // {
+  //   id: 10,
+  //   name: '6 Cheese',
+  //   image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/6cheese.png',
+  //   price: 13.29,
+  // },
 ];
 
 export default products;
