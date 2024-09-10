@@ -10,7 +10,7 @@ export default function MenuScreen() {
       <FlatList
         data={products}
         renderItem={({ item }) => <ProducListItem product={item} />}
-        keyExtractor={(item) => item.id.toLocaleString()}
+        // keyExtractor={(item) => item.id.toLocaleString()}
         numColumns={2}
         contentContainerStyle={{ gap: 5, padding: 10 }}
         columnWrapperStyle={{ gap: 10 }}
