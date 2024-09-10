@@ -15,7 +15,7 @@ export const ProductListItem = ({ product }: ProductListItemProps) => {
   const segments = useSegments()
   const href: Href<string> = (segments[0] ? `${segments[0]}/menu/${product.id}` : `/menu/${product.id}`) as Href<string>;
 
-  console.log(segments)
+
 
   return (
     <Link href={href} asChild>
