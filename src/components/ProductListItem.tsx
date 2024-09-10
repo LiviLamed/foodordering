@@ -2,18 +2,23 @@ import { Image, StyleSheet, Platform, View, Text, Pressable } from 'react-native
 import Colors from '@/constants/Colors';
 import products from '@/assets/data/products';
 import { Product } from '@/models/product.model';
-import { Link } from 'expo-router';
+import {Href, Link, useSegments} from 'expo-router';
 
-interface ProducListItemProps {
+interface ProductListItemProps {
   product: Product;
 }
 
 export const defaultPizzaImage =
   'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/default.png';
 
-export const ProducListItem = ({ product }: ProducListItemProps) => {
+export const ProductListItem = ({ product }: ProductListItemProps) => {
+  const segments = useSegments()
+  const href: Href<string> = (segments[0] ? `${segments[0]}/menu/${product.id}` : `/menu/${product.id}`) as Href<string>;
+
+  console.log(segments)
+
   return (
-    <Link href={`/menu/${product.id}`} asChild>
+    <Link href={href} asChild>
       <Pressable style={styles.container}>
         <Image source={{ uri: product.image || defaultPizzaImage }} style={styles.image} />
         <Text style={styles.title}>{product.name}</Text>
@@ -52,3 +57,5 @@ const styles = StyleSheet.create({
     color: Colors.light.tint,
   },
 });
+
+export default ProductListItem

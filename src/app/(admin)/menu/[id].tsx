@@ -1,7 +1,7 @@
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
 import products from '@/assets/data/products';
-import { defaultPizzaImage } from '@/components/ProducListItem';
+import { defaultPizzaImage } from '@/components/ProductListItem';
 import { useState } from 'react';
 import Button from '@/components/Button';
 import { useCart } from '@/provider/CartProvider';
@@ -28,7 +28,7 @@ const ProductDetailsScreen = () => {
       return;
     }
     addItem(product, selectedSize);
-    router.push('./cart');
+    router.push('/cart');
   };
 
   return (
@@ -60,7 +60,8 @@ const ProductDetailsScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start',
+    display: 'flex',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   image: {
